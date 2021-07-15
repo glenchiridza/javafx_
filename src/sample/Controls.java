@@ -21,8 +21,8 @@ public class Controls extends Application {
         TextField firstNameFld = new TextField();
         TextField lastNameFld = new TextField();
 
-        Label firstNameLbl = new Label();
-        Label lastNameLbl = new Label();
+        Label firstNameLbl = new Label("_First Name");
+        Label lastNameLbl = new Label("_Last Name");
 
         firstNameLbl.setLabelFor(firstNameFld);
         firstNameLbl.setMnemonicParsing(true);
