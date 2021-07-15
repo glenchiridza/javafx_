@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeskAppWithSB.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DeskAppWithSB/sample/Controller.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DeskAppWithSB/sample/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DeskAppWithSB/sample/sample.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,8 +75,12 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1vLoMTngv3l7xE3QHcHnPawnB9I" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -184,6 +207,22 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="706" height="175" key="GridCell.Tab.0.bottom" timestamp="1626352417414">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="706" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1626352417414" />
+    <state width="706" height="175" key="GridCell.Tab.0.center" timestamp="1626352417414">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="706" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1626352417414" />
+    <state width="706" height="175" key="GridCell.Tab.0.left" timestamp="1626352417413">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="706" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1626352417413" />
+    <state width="706" height="175" key="GridCell.Tab.0.right" timestamp="1626352417414">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="706" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1626352417414" />
     <state x="332" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1626350819626">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
