@@ -21,13 +21,13 @@ public class Main extends Application {
         //add the text to the VBOx
         root.getChildren().add(text);
         //set the size of VBOX
-        root.setMinSize(350,750);
+        root.setMinSize(350,250);
 
         //create the scene
         Scene scene = new Scene(root);
 
 //        set the stage properties
-        primaryStage.setX(100);
+        primaryStage.setX(600); //X and Y determine the upper left cortner position of the stage
         primaryStage.setY(200);
         primaryStage.setMinHeight(300);
         primaryStage.setMinWidth(400);

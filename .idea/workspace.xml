@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeskAppWithSB.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DeskAppWithSB/sample/Controller.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DeskAppWithSB/sample/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DeskAppWithSB/sample/sample.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeskAppWithSB/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeskAppWithSB/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +56,13 @@
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
@@ -105,7 +98,7 @@
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Controls">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -130,6 +123,20 @@
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
+    </configuration>
+    <configuration name="Controls" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample.Controls" />
+      <module name="DeskAppWithSB" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
@@ -184,6 +191,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Controls" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Controls" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -207,29 +223,33 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="706" height="175" key="GridCell.Tab.0.bottom" timestamp="1626352417414">
+    <state width="706" height="175" key="GridCell.Tab.0.bottom" timestamp="1626353151956">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="706" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1626352417414" />
-    <state width="706" height="175" key="GridCell.Tab.0.center" timestamp="1626352417414">
+    <state width="706" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1626353151956" />
+    <state width="706" height="175" key="GridCell.Tab.0.center" timestamp="1626353151955">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="706" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1626352417414" />
-    <state width="706" height="175" key="GridCell.Tab.0.left" timestamp="1626352417413">
+    <state width="706" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1626353151955" />
+    <state width="706" height="175" key="GridCell.Tab.0.left" timestamp="1626353151955">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="706" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1626352417413" />
-    <state width="706" height="175" key="GridCell.Tab.0.right" timestamp="1626352417414">
+    <state width="706" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1626353151955" />
+    <state width="706" height="175" key="GridCell.Tab.0.right" timestamp="1626353151956">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="706" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1626352417414" />
+    <state width="706" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1626353151956" />
     <state x="332" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1626350819626">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="332" y="27" width="1024" height="741" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1626350819626" />
-    <state x="554" y="99" width="802" height="595" key="new project wizard" timestamp="1626350802428">
+    <state x="554" y="99" width="802" height="595" key="new project wizard" timestamp="1626353080600">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="554" y="99" width="802" height="595" key="new project wizard/0.27.1366.741@0.27.1366.741" timestamp="1626350802428" />
+    <state x="554" y="99" width="802" height="595" key="new project wizard/0.27.1366.741@0.27.1366.741" timestamp="1626353080600" />
+    <state x="654" y="175" key="run.anything.popup" timestamp="1626353101196">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="654" y="175" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1626353101196" />
   </component>
 </project>
