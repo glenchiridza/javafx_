@@ -96,7 +96,7 @@
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
-  <component name="RunManager" selected="Application.ToggleButtonControl">
+  <component name="RunManager" selected="Application.RadioButtonControl">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -180,8 +180,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TextFieldControl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.TextFieldControl" />
+    <configuration name="RadioButtonControl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample.RadioButtonControl" />
       <module name="DeskAppWithSB" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -250,16 +250,16 @@
       <item itemvalue="Application.ButtonControl" />
       <item itemvalue="Application.CheckBoxControl" />
       <item itemvalue="Application.MenuControl" />
-      <item itemvalue="Application.TextFieldControl" />
       <item itemvalue="Application.ToggleButtonControl" />
+      <item itemvalue="Application.RadioButtonControl" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RadioButtonControl" />
         <item itemvalue="Application.ToggleButtonControl" />
         <item itemvalue="Application.CheckBoxControl" />
         <item itemvalue="Application.MenuControl" />
         <item itemvalue="Application.ButtonControl" />
-        <item itemvalue="Application.TextFieldControl" />
       </list>
     </recent_temporary>
   </component>
@@ -289,22 +289,22 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="793" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1626431992186" />
-    <state width="696" height="175" key="GridCell.Tab.0.bottom" timestamp="1626432025111">
+    <state width="696" height="175" key="GridCell.Tab.0.bottom" timestamp="1626432544713">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="696" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1626432025111" />
-    <state width="696" height="175" key="GridCell.Tab.0.center" timestamp="1626432025109">
+    <state width="696" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1626432544713" />
+    <state width="696" height="175" key="GridCell.Tab.0.center" timestamp="1626432544712">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="696" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1626432025109" />
-    <state width="696" height="175" key="GridCell.Tab.0.left" timestamp="1626432025108">
+    <state width="696" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1626432544712" />
+    <state width="696" height="175" key="GridCell.Tab.0.left" timestamp="1626432544712">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="696" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1626432025108" />
-    <state width="696" height="175" key="GridCell.Tab.0.right" timestamp="1626432025110">
+    <state width="696" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1626432544712" />
+    <state width="696" height="175" key="GridCell.Tab.0.right" timestamp="1626432544713">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="696" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1626432025110" />
+    <state width="696" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1626432544713" />
     <state width="706" height="217" key="GridCell.Tab.1.bottom" timestamp="1626357477875">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
