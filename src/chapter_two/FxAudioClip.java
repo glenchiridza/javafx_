@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
+import javafx.scene.layout.GridPane;
 import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 
@@ -74,6 +75,22 @@ public class FxAudioClip extends Application {
                 audioClip.stop();
             }
         });
+
+        //bind the properties
+        audioClip.cycleCountProperty().bind(cyclerSlider.valueProperty());
+        audioClip.volumeProperty().bind(volumeSlider.valueProperty());
+        audioClip.rateProperty().bind(rateSlider.valueProperty());
+        audioClip.balanceProperty().bind(balanceSlider.valueProperty());
+        audioClip.panProperty().bind(paneSlider.valueProperty());
+        audioClip.priorityProperty().bind(prioritySlider.valueProperty());
+
+        GridPane sliderPane = new GridPane();
+        sliderPane.setHgap(5);
+        sliderPane.setVgap(10);
+
+        //add the details to the grid pane
+
+
 
         root.setStyle(
                 "-fx-padding: 10;" +
