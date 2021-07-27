@@ -1,13 +1,23 @@
 package sample;
 
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 
 /**
  * Created by glenc on Jul 2021
  **/
-public class TextAreaControl Application {
+public class TextAreaControl extends Application {
 
+    TextArea messageArea = new TextArea();
     public static void main(String[] args) {
 
         launch(args);
@@ -15,6 +25,30 @@ public class TextAreaControl Application {
     @Override
     public void start(Stage stage) throws Exception {
 
+        TextField input =  new TextField();
+        input.setPromptText("Input you message here");
+
+        messageArea.setPromptText("You message...");
+        messageArea.setPrefRowCount(20);
+        messageArea.setPrefColumnCount(10);
+
+
+        Button printBtn = new Button("Print Message");
+
+        printBtn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                messageArea.appendText(input.getText()+"\n");
+            }
+        });
+
+
+        VBox root = new VBox();
+
+        root.getChildren().addAll(new Label("Input: "),
+                input,new Label("Messages: "),messageArea,
+                printBtn);
+        root.setMinSize(300,300);
 
         root.setStyle(
                 "-fx-padding: 10;" +
