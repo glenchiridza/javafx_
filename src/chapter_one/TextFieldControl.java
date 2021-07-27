@@ -1,23 +1,23 @@
-package sample;
+package chapter_one;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 /**
  * Created by glenc on Jul 2021
  **/
 
-public class ButtonControl extends Application {
 
-    Label messageLabel = new Label("Press the Button");
+public class TextFieldControl extends Application {
+
+    //create message label
+    Label messageLabel = new Label("ENter you Name in to Field");
 
     public static void main(String[] args) {
         launch(args);
@@ -26,36 +26,36 @@ public class ButtonControl extends Application {
     @Override
     public void start(Stage stage) throws Exception{
 
-        Button saveBtn = new Button("_Save");
-        saveBtn.setDefaultButton(true);
+        TextField firstNameFld = new TextField();
+        TextField lastNameFld = new TextField();
 
-        saveBtn.setOnAction(new EventHandler<ActionEvent>() {
+        firstNameFld.setPrefColumnCount(15);
+        lastNameFld.setPrefColumnCount(15);
+
+        firstNameFld.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                printMessage("You have successfully saved");
+                printMessage("You Have changed your First Name");
             }
         });
 
-        Button cancelBtn = new Button("_Cancel");
-        cancelBtn.setCancelButton(true);
-        cancelBtn.setOnAction(new EventHandler<ActionEvent>() {
+        lastNameFld.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                printMessage("You have pressed cancel");
+                printMessage("You have change your surname");
             }
         });
 
-        HBox buttonBox = new HBox();
-        buttonBox.getChildren().addAll(saveBtn,cancelBtn);
-        buttonBox.setSpacing(15);
+        GridPane root = new GridPane();
 
-        VBox root = new VBox();
-        root.getChildren().addAll(messageLabel, buttonBox);
+        root.setHgap(10);
+        root.setVgap(5);
 
-        root.setSpacing(15);
+        root.addRow(0, messageLabel);
+        root.addRow(1, new Label("First Name"), firstNameFld);
+        root.addRow(2, new Label("Last Name"), lastNameFld);
 
         root.setMinSize(350, 250);
-
 
 
         root.setStyle(
@@ -67,15 +67,22 @@ public class ButtonControl extends Application {
                         "-fx-border-color:blue;"
         );
 
+
         Scene scene = new Scene(root);
 
         stage.setScene(scene);
-        stage.setTitle("Button Control");
+
+        stage.setTitle("Text Area Practice");
+
         stage.show();
+
+
     }
 
+    private void printMessage(String msg) {
 
-    public void printMessage(String msg){
         messageLabel.setText(msg);
     }
+
+
 }

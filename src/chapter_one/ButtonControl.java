@@ -1,23 +1,22 @@
-package sample;
+package chapter_one;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
  * Created by glenc on Jul 2021
  **/
 
+public class ButtonControl extends Application {
 
-public class TextFieldControl extends Application {
-
-    //create message label
-    Label messageLabel = new Label("ENter you Name in to Field");
+    Label messageLabel = new Label("Press the Button");
 
     public static void main(String[] args) {
         launch(args);
@@ -26,36 +25,36 @@ public class TextFieldControl extends Application {
     @Override
     public void start(Stage stage) throws Exception{
 
-        TextField firstNameFld = new TextField();
-        TextField lastNameFld = new TextField();
+        Button saveBtn = new Button("_Save");
+        saveBtn.setDefaultButton(true);
 
-        firstNameFld.setPrefColumnCount(15);
-        lastNameFld.setPrefColumnCount(15);
-
-        firstNameFld.setOnAction(new EventHandler<ActionEvent>() {
+        saveBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                printMessage("You Have changed your First Name");
+                printMessage("You have successfully saved");
             }
         });
 
-        lastNameFld.setOnAction(new EventHandler<ActionEvent>() {
+        Button cancelBtn = new Button("_Cancel");
+        cancelBtn.setCancelButton(true);
+        cancelBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                printMessage("You have change your surname");
+                printMessage("You have pressed cancel");
             }
         });
 
-        GridPane root = new GridPane();
+        HBox buttonBox = new HBox();
+        buttonBox.getChildren().addAll(saveBtn,cancelBtn);
+        buttonBox.setSpacing(15);
 
-        root.setHgap(10);
-        root.setVgap(5);
+        VBox root = new VBox();
+        root.getChildren().addAll(messageLabel, buttonBox);
 
-        root.addRow(0, messageLabel);
-        root.addRow(1, new Label("First Name"), firstNameFld);
-        root.addRow(2, new Label("Last Name"), lastNameFld);
+        root.setSpacing(15);
 
         root.setMinSize(350, 250);
+
 
 
         root.setStyle(
@@ -67,22 +66,15 @@ public class TextFieldControl extends Application {
                         "-fx-border-color:blue;"
         );
 
-
         Scene scene = new Scene(root);
 
         stage.setScene(scene);
-
-        stage.setTitle("Text Area Practice");
-
+        stage.setTitle("Button Control");
         stage.show();
-
-
     }
 
-    private void printMessage(String msg) {
 
+    public void printMessage(String msg){
         messageLabel.setText(msg);
     }
-
-
 }

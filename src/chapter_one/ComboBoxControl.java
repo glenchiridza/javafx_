@@ -1,20 +1,21 @@
-package sample;
+package chapter_one;
 
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
  * Created by glenc on Jul 2021
  **/
-public class ListViewControl extends Application {
+public class ComboBoxControl extends Application {
 
-    Label selectionLabel = new Label("Your selection: None");
+    Label selectionLbl = new Label("Your selection: None");
     public static void main(String[] args) {
 
         launch(args);
@@ -22,23 +23,27 @@ public class ListViewControl extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        ListView<String> cars = new ListView<>();
-        cars.getItems().addAll("Ford","Ferrari","Porsche");
+
+        Label carLabel = new Label("Car:");
+
+        ComboBox<String> cars = new ComboBox<>();
+        cars.getItems().addAll("FOrd","Audi","Porsche");
 
         cars.getSelectionModel().selectFirst();
 
         cars.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             @Override
-            public void changed(ObservableValue<? extends String> observableValue, String t1, String t2) {
-                selectionLabel.setText("You selected: "+t2);
+            public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
+                selectionLbl.setText("Your Selection: "+newValue);
             }
         });
 
-        GridPane root =  new GridPane();
-        root.setVgap(10);
-        root.setHgap(10);
-        root.addRow(0,cars);
-        root.addRow(1,selectionLabel);
+        HBox carBox = new HBox();
+        carBox.getChildren().addAll(carLabel,cars);
+        carBox.setSpacing(10);
+
+        VBox root = new VBox();
+        root.getChildren().addAll(carBox,selectionLbl);
         root.setMinSize(350,350);
 
         root.setStyle(
@@ -49,10 +54,10 @@ public class ListViewControl extends Application {
                         "-fx-border-radius:5;"+
                         "-fx-border-color:blue;"
         );
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("ListView");
-        stage.show();
 
+        Scene scene= new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Combox Box Selection");
+        stage.show();
     }
 }

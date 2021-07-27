@@ -1,4 +1,4 @@
-package sample;
+package chapter_one;
 
 public class Controller {
 }
