@@ -5,8 +5,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 
@@ -89,6 +92,19 @@ public class FxAudioClip extends Application {
         sliderPane.setVgap(10);
 
         //add the details to the grid pane
+        sliderPane.addRow(0,new Label("CycleCount"),cyclerSlider);
+        sliderPane.addRow(1,new Label("Volume"),volumeSlider);
+        sliderPane.addRow(2, new Label("Rate:"), rateSlider);
+        sliderPane.addRow(3, new Label("Balance:"), balanceSlider);
+        sliderPane.addRow(4, new Label("Pan:"), paneSlider);
+        sliderPane.addRow(5, new Label("Priority:"), prioritySlider);
+
+        //create the HBOX
+        HBox buttonBox = new HBox(5,playButton,stopButton);
+
+        VBox root = new VBox(5,sliderPane,buttonBox);
+        root.setPrefWidth(300);
+        root.setPrefHeight(350);
 
 
 
