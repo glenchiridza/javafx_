@@ -43,8 +43,29 @@ public class MenuExampleControl extends Application {
             }
         });
 
+        fileMenu.getItems().addAll(newItem,openItem);
+
+        //create menu item copy
+        MenuItem copyItem = new MenuItem("Copy");
+        copyItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                printMessage("You press the copy menu item");
+            }
+        });
+
+        MenuItem pasteItem = new MenuItem("Paste");
+        pasteItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                printMessage("You pressed the paste menu item");
+            }
+        });
+
+        editMenu.getItems().addAll(copyItem,pasteItem);
 
 
+        //Now crea
 
         root.setStyle(
                 "-fx-padding: 10;" +
