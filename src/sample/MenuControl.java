@@ -45,7 +45,8 @@ public class MenuControl extends Application {
         MenuItem ferrari =  new MenuItem("Ferrari");
         ferrari.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(ActionEvent actionEvent) {
+            public void handle(ActionEvent actionEvent)
+            {
                 printMessage("You have selected ferrari");
             }
         });
