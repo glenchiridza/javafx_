@@ -18,6 +18,7 @@ public class ComboBoxControl extends Application {
     Label selectionLbl = new Label("Your selection: None");
     public static void main(String[] args) {
 
+        launch(args);
     }
     @Override
     public void start(Stage stage) throws Exception {
