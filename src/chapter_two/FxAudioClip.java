@@ -30,7 +30,7 @@ public class FxAudioClip extends Application {
     @Override
     public void init() throws Exception {
         //create audio clip which loads the audio data synchronously
-        final URL resource = getClass().getResource("test.mp3");
+        final URL resource = getClass().getResource("faded.mp3");
         audioClip = new AudioClip(resource.toExternalForm());
 
     }
