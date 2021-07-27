@@ -6,7 +6,10 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -31,7 +34,7 @@ public class MenuExampleControl extends Application {
         newItem.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                printMessage("You pressed the new Menu Item")
+                printMessage("You pressed the new Menu Item");
             }
         });
 
@@ -62,11 +65,25 @@ public class MenuExampleControl extends Application {
             }
         });
 
+        //add the menu items to the menu
         editMenu.getItems().addAll(copyItem,pasteItem);
 
 
-        //Now crea
+        //Now create the Menu Bar
+        MenuBar menuBar  = new MenuBar();
+        //add menus to it
+        menuBar.getMenus().addAll(fileMenu,editMenu);
 
+        //create the menu Box
+        HBox menu = new HBox();
+        menu.getChildren().add(menuBar);
+
+        //create the vertical box
+        VBox root = new VBox();
+        root.getChildren().addAll(menu,messageLbl);
+        root.setMinSize(450,450);
+
+        //set the styling
         root.setStyle(
                 "-fx-padding: 10;" +
                         "-fx-border-style:solid inside;"+
