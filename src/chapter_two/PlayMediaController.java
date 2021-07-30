@@ -5,12 +5,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
+import javafx.scene.media.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -21,6 +20,7 @@ import java.net.URL;
  **/
 public class PlayMediaController extends Application {
 
+    private TextArea messageArea = new TextArea();
     public static void main(String[] args) {
         launch(args);
     }
@@ -28,7 +28,7 @@ public class PlayMediaController extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        URL mediaUrl = getClass().getResource("Test.mp4");
+        URL mediaUrl = getClass().getResource("faded.mp3");
         String mediaStringUrl = mediaUrl.toExternalForm();
 
         //create a media
@@ -75,6 +75,22 @@ public class PlayMediaController extends Application {
             }
         });
 
+        //create handlers for error
+        player.setOnError(() -> {
+//            handle asynchronous error in player
+            printMessage(player.getError());
+        });
+
+        media.setOnError(() ->{
+            printMessage(media.getError());
+        });
+
+        mediaView.setOnError(mediaErrorEvent -> {
+            printMessage(mediaErrorEvent.getMediaError());
+        });
+
+
+
         HBox controlBox = new HBox(5,playButton,stopButton);
 
         VBox root = new VBox(5,mediaView,controlBox);
@@ -92,5 +108,9 @@ public class PlayMediaController extends Application {
         stage.setScene(scene);
         stage.setTitle("ListView");
         stage.show();
+    }
+
+    private void printMessage(MediaException error) {
+        messageArea.setText(error.toString());
     }
 }
