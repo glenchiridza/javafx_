@@ -3,6 +3,7 @@ package chapter_two;
 import javafx.application.Application;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
+import javafx.collections.ObservableMap;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -56,6 +57,14 @@ public class PlayMediaController extends Application {
 
         //create a media
         Media media = new Media(mediaStringUrl);
+
+//        create marker positions
+        ObservableMap<String,Duration> markers = media.getMarkers();
+        markers.put("Start",Duration.ZERO);
+        markers.put("Interval",media.getDuration().divide(2.0));
+        markers.put("End",media.getDuration());
+
+
         //create mediaplayer
         final MediaPlayer player = new MediaPlayer(media);
         //auto begin playback
