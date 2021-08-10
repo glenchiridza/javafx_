@@ -145,6 +145,22 @@ public class PlayMediaController extends Application {
             }
         });
 
+        // add handlers for end and repeat
+        player.setOnEndOfMedia(new Runnable() {
+            @Override
+            public void run() {
+                messageArea.appendText("\nEnd of media");
+            }
+        });
+
+        player.setOnRepeat(new Runnable() {
+            @Override
+            public void run() {
+                messageArea.appendText("\n Repeating media");
+            }
+        });
+
+
         //create handlers for error
         player.setOnError(() -> {
 //            handle asynchronous error in player
