@@ -7,9 +7,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.*;
@@ -160,7 +162,6 @@ public class PlayMediaController extends Application {
             }
         });
 
-
         //create handlers for error
         player.setOnError(() -> {
 //            handle asynchronous error in player
@@ -177,9 +178,21 @@ public class PlayMediaController extends Application {
 
 
 
+        //create grid grid frame for sliders
+        GridPane gridSliderPane = new GridPane();
+        gridSliderPane.setHgap(5);
+        gridSliderPane.setVgap(10);
+
+        //add details to the pane
+        gridSliderPane.addRow(0, new Label("CycleCount"),cycleslider);
+        gridSliderPane.addRow(1, new Label("Volume"),volumeSlider);
+        gridSliderPane.addRow(2,new Label("Rate:"),rateSlider);
+        gridSliderPane.addRow(3,new Label("Balance",balanceSlider));
+
+
         HBox controlBox = new HBox(5,playButton,stopButton);
 
-        VBox root = new VBox(5,mediaView,controlBox);
+        VBox root = new VBox(5,mediaView,controlBox,gridSliderPane,messageArea);
 
 
         root.setStyle(
