@@ -111,6 +111,17 @@ public class PlayMediaController extends Application {
             }
         });
 
+        // display meta data
+        player.setOnReady(new Runnable() {
+            @Override
+            public void run() {
+                ObservableMap<String,Object> metadata = media.getMetadata();
+                for (String key: metadata.keySet()){
+                    messageArea.appendText("\n"+ key +" = "+ metadata.get(key));
+                }
+            }
+        });
+
         //create the slider listeners
         cycleslider.valueProperty().addListener(new InvalidationListener() {
             @Override
