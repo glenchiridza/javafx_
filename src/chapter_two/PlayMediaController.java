@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.HBox;
@@ -28,7 +29,24 @@ public class PlayMediaController extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        URL mediaUrl = getClass().getResource("faded.mp3");
+        //create sliders
+        final Slider cycleslider = new Slider(1,5,1);
+        cycleslider.setMajorTickUnit(1);
+        cycleslider.setShowTickLabels(true);
+
+        final Slider volumeSlider  = new Slider(0.0,1.0,0.5);
+        volumeSlider.setMajorTickUnit(0.1);
+        volumeSlider.setShowTickLabels(true);
+
+        final Slider rateSlider = new Slider(0,8,4);
+        rateSlider.setMajorTickUnit(1);
+        rateSlider.setShowTickLabels(true);
+
+        final Slider balanceSlider = new Slider(-1.0,1.0,0.0);
+        balanceSlider.setMajorTickUnit(0.2);
+        balanceSlider.setShowTickLabels(true);
+
+        URL mediaUrl = getClass().getResource("bill.mp4");
         String mediaStringUrl = mediaUrl.toExternalForm();
 
         //create a media
@@ -75,6 +93,8 @@ public class PlayMediaController extends Application {
             }
         });
 
+        //
+
         //create handlers for error
         player.setOnError(() -> {
 //            handle asynchronous error in player
@@ -111,6 +131,8 @@ public class PlayMediaController extends Application {
     }
 
     private void printMessage(MediaException error) {
-        messageArea.setText(error.toString());
+        MediaException.Type errorType = error.getType();
+        String errorMessage = error.getMessage();
+        messageArea.setText(errorMessage);
     }
 }
