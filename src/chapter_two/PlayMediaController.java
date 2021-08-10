@@ -17,6 +17,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.media.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.net.URL;
 
@@ -59,6 +60,10 @@ public class PlayMediaController extends Application {
         final MediaPlayer player = new MediaPlayer(media);
         //auto begin playback
         player.setAutoPlay(true);
+
+//          when needing to set start and end time of video duration
+//        player.setStartTime(Duration.minutes(1));
+//        player.setStopTime(Duration.minutes(2));
 
         MediaView mediaView = new MediaView(player);
         mediaView.setFitWidth(400);
