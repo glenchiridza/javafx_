@@ -1,6 +1,8 @@
 package chapter_two;
 
 import javafx.application.Application;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -93,7 +95,55 @@ public class PlayMediaController extends Application {
             }
         });
 
-        //
+        //create the slider listeners
+        cycleslider.valueProperty().addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                if (cycleslider.isValueChanging()){
+                    messageArea.appendText("Cycle count change to " +
+                            (int)cycleslider.getValue());
+                    player.setCycleCount((int)cycleslider.getValue());
+                }
+            }
+        });
+
+        volumeSlider.valueProperty().addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                if (volumeSlider.isValueChanging()){
+                    messageArea.appendText("Volume count change to " +
+                            (int)volumeSlider.getValue());
+                    player.setCycleCount((int)volumeSlider.getValue());
+
+                }
+            }
+        });
+
+        rateSlider.valueProperty().addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                if(rateSlider.isValueChanging()){
+                    messageArea.appendText("rateSlider count change to " +
+                            (int)rateSlider.getValue());
+                    player.setCycleCount((int)rateSlider.getValue());
+
+                }
+            }
+        });
+
+        balanceSlider.valueProperty().addListener(new InvalidationListener()
+        {
+            @Override
+            public void invalidated(Observable ov)
+            {
+                if (balanceSlider.isValueChanging())
+                {
+                    messageArea.appendText("\nBalance changed to: " +
+                            balanceSlider.getValue());
+                    player.setVolume(balanceSlider.getValue());
+                }
+            }
+        });
 
         //create handlers for error
         player.setOnError(() -> {
